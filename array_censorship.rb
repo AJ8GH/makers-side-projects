@@ -15,8 +15,6 @@ test_tweets = [
 
 banned_phrases = ["sucks", "bad", "hate", "foolish", "danger to society"]
 
-test_tweets.each do |tweet|
-  tweet.gsub!(/sucks|bad|hate|foolish|danger to society/, 'CENSORED')
-end
+test_tweets.each { |tweet| tweet.gsub!(/sucks|bad|hate|foolish|danger to society/, 'CENSORED') }
 
 puts test_tweets
